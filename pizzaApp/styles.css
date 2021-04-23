@@ -17,14 +17,14 @@ header {
 .banner {
   width: 100%;
   height: 5rem;
-  background-color: black;
-  display: flex;
+  background-color: lightgrey;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 
 .greenText {
-  color: green;
+  color: darkblue;
 }
 
 .toppingInstructions {
@@ -71,8 +71,9 @@ header {
 }
 
 footer {
+  padding-top: 1rem;
   width: 100%;
-  height: 10rem;
+  height: 5rem;
   background-color: lightgrey;
   display: flex;
   justify-content: center;
