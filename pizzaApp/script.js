@@ -4,6 +4,21 @@ console.log(banner);
 let bannerOpacity = 0;
 let intervalID = 0;
 
+let sideDiv = document.getElementsByClassName("pizzaIngredients")[0];
+console.log(sideDiv);
+for (let i = 1; i < 10; i++) {
+  //     let newImage = document.createElement('img');
+  let newImage = document.createElement("img");
+  newImage.setAttribute("src", "images/" + [i] + ".jpg", newImage);
+  newImage.classList.add("toppings");
+  sideDiv.appendChild(newImage);
+  newImage.onclick = function (e) {
+    displayedImage.src = e.target.src;
+  };
+}
+
+//eitan ^^
+
 const hide = () => {
   bannerOpacity = Number(
     window.getComputedStyle(banner).getPropertyValue("opacity")
