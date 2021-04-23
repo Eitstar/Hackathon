@@ -7,8 +7,30 @@
 
 header {
   width: 100%;
-  height: 5rem;
+  height: 10rem;
   background-color: salmon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  width: 100%;
+  height: 5rem;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.greenText {
+  color: green;
+}
+
+.toppingInstructions {
+  grid-column: 1 / span 3;
+  justify-self: center;
+  align-self: center;
 }
 
 .parentContainer {
@@ -33,6 +55,7 @@ header {
 }
 
 .pizzaIngredients {
+  margin-left: 1rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 5rem;
@@ -49,6 +72,43 @@ header {
 
 footer {
   width: 100%;
-  height: 5rem;
-  background-color: black;
+  height: 10rem;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+i {
+  margin: 1rem;
+}
+
+i,
+a {
+  transition: all 1s ease-in-out;
+}
+i:hover {
+  transform: scale(1.5);
+}
+
+a {
+  margin: 1rem;
+  color: #2a558c;
+  text-decoration: none;
+}
+
+a > li:hover {
+  transform: scale(1.5);
 }
