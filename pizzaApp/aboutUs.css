@@ -1,0 +1,14 @@
+.profileContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #f2884b;
+}
+
+.textContainer {
+  text-align: center;
+  background-color: #f2884b;
+}
+p {
+  white-space: nowrap;
+}

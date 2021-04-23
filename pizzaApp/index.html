@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pizza app</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <nav></nav>
-    </header>
-    <div class="parentContainer">
-      <div id="pizzaSideBar" class="pizzaIngredients">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pizza app</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <script src="https://kit.fontawesome.com/6009118e5a.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <a href="about.html">
+          <li>About Us</li>
+        </a>
+        <a href="index.html">
+          <li>Home</li>
+        </a>
+      </ul>
+    </nav>
+
+  </header>
+  <div id = 'banner' class="banner">
+    <span class="greenText">
+      <p>test</p>
+    </span>
+  </div>
+  <div class="parentContainer">
+    <div id="pizzaSideBar" class="pizzaIngredients">
+      <h2 class="toppingInstructions">Pick a topping and drag it!</h3>
         <!-- <img class="toppings" src="images/blankPizza.png" alt="" />
         <img class="toppings" src="images/blankPizza.png" alt="" />
         <img class="toppings" src="images/blankPizza.png" alt="" />
@@ -22,14 +44,29 @@
         <img class="toppings" src="images/blankPizza.png" alt="" />
         <img class="toppings" src="images/blankPizza.png" alt="" />
         <img class="toppings" src="images/blankPizza.png" alt="" /> -->
-      </div>
-      <div class="pizzaDropZone">
-        <img class="pizzaImg" src="images/blankPizza.png" alt="" />
-      </div>
     </div>
-    <footer>
-      <nav></nav>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+    <div class="pizzaDropZone">
+      <img class="pizzaImg" src="images/blankPizza.png" alt="" />
+    </div>
+  </div>
+  <footer>
+
+    <nav>
+      <h2>More pages that love pizza like us!!!</h2>
+      <ul>
+        <li><a href=""><i class="fab fa-facebook fa-3x"></i></a>
+        </li>
+        <li><a href=""><i class="fab fa-twitter fa-3x"></i></a>
+
+        </li>
+        <li><a href=""><i class="fab fa-instagram fa-3x"></i></a>
+
+        </li>
+      </ul>
+    </nav>
+
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>
