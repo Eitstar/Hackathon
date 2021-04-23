@@ -12,9 +12,7 @@ for (let i = 1; i < 10; i++) {
   newImage.setAttribute("src", "images/" + [i] + ".jpg", newImage);
   newImage.classList.add("toppings");
   sideDiv.appendChild(newImage);
-  newImage.onclick = function (e) {
-    displayedImage.src = e.target.src;
-  };
+  newImage.onclick = function (e) {};
 }
 
 //eitan ^^
