@@ -3,21 +3,43 @@ const banner = document.getElementById("banner");
 let bannerOpacity = 0;
 let intervalID = 0;
 
+const dropZone = document.getElementById("dropZone");
+console.log(dropZone);
+
 let sideDiv = document.getElementsByClassName("pizzaIngredients")[0];
-console.log(sideDiv);
-for (let i = 1; i < 10; i++) {
-  //     let newImage = document.createElement('img');
-  let newImage = document.createElement("img");
-  newImage.setAttribute("src", "images/" + [i] + ".jpg", newImage);
-  newImage.classList.add("toppings");
-  sideDiv.appendChild(newImage);
-  newImage.onclick = function (e) {};
-}
+
+dropZone.addEventListener("dragover", (e) => {
+  e.preventDefault();
+  const ingredient = document.querySelector(".dragging");
+  dropZone.appendChild(ingredient);
+  console.log("drag over");
+});
+const createPictures = () => {
+  for (let i = 1; i < 10; i++) {
+    let newImage = document.createElement("img");
+    newImage.setAttribute("src", "images/" + [i] + ".jpg", newImage);
+    newImage.classList.add("toppings");
+    newImage.setAttribute("draggable", "true");
+    newImage.addEventListener("dragstart", () => {
+      newImage.classList.add("dragging");
+      console.log(document.getElementsByClassName("dragging"));
+      console.log("drag started");
+    });
+    newImage.addEventListener("dragend", () => {
+      newImage.classList.remove("dragging");
+      console.log("drag ended");
+    });
+    sideDiv.appendChild(newImage);
+  }
+};
+
+createPictures();
+
+//have to write two new functions, one for dragend, one for dragstart
 
 //eitan ^^
 
 const rollingPizza = document.getElementById("rollingPizza");
-console.log(rollingPizza);
 let pos = 0;
 
 const frame = () => {
@@ -50,7 +72,6 @@ const hide = () => {
 const show = () => {
   if (bannerOpacity == 0) {
     banner.style.display = "none";
-    console.log("fired");
   }
 };
 const fadeOut = () => {
