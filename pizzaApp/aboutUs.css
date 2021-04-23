@@ -5,6 +5,15 @@
   background-color: #f2884b;
 }
 
+.profileContainer img {
+  transition: 2s ease-in;
+  border: black 3px solid;
+}
+
+.profileContainer img:hover {
+  transform: scale(0.9);
+  border-radius: 50%;
+}
 .textContainer {
   text-align: center;
   background-color: #f2884b;

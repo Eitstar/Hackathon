@@ -3,6 +3,7 @@
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  cursor: url(https://cur.cursors-4u.net/food/foo-2/foo165.cur), auto !important;
 }
 
 header {
@@ -14,15 +15,36 @@ header {
   align-items: center;
 }
 
+.logo {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  transition: all 2s ease-in-out;
+}
+
+.logo:hover {
+  transform: rotate(180deg);
+}
+
+.pizzaLogoContainer {
+  height: 5rem;
+  width: 100%;
+  background-color: salmon;
+  position: relative;
+}
+
 .banner {
   width: 100%;
   height: 5rem;
-  background-color: lightgrey;
+  background-color: #f2884b;
   justify-content: center;
   align-items: center;
   display: none;
 }
 
+.whiteText {
+  color: white;
+}
 .greenText {
   color: darkblue;
 }
@@ -74,7 +96,7 @@ footer {
   padding-top: 1rem;
   width: 100%;
   height: 5rem;
-  background-color: lightgrey;
+  background-color: black;
   display: flex;
   justify-content: center;
 }
@@ -108,6 +130,16 @@ a {
   margin: 1rem;
   color: #2a558c;
   text-decoration: none;
+  font-size: large;
+}
+
+a:link,
+a:visited {
+  color: none;
+}
+
+a:hover {
+  color: lightblue;
 }
 
 a > li:hover {
