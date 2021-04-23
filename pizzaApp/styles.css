@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 5rem;
+  background-color: lightcoral;
+}
+
+.parentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.pizzaDropZone {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100vh;
+  background-color: limegreen;
+}
+
+.pizzaImg {
+  width: 40%;
+  height: 40%;
+  margin-top: 5rem;
+}
+
+.pizzaIngredients {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: lightskyblue;
+}
+
+.toppings {
+  width: 5rem;
+  height: 5rem;
+}
