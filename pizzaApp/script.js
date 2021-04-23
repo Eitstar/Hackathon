@@ -1,6 +1,5 @@
 //Eitan will look for pictures, and loop through them, append them
 const banner = document.getElementById("banner");
-console.log(banner);
 let bannerOpacity = 0;
 let intervalID = 0;
 
@@ -17,6 +16,22 @@ for (let i = 1; i < 10; i++) {
 
 //eitan ^^
 
+const rollingPizza = document.getElementById("rollingPizza");
+console.log(rollingPizza);
+let pos = 0;
+
+const frame = () => {
+  if (pos == 350) {
+    clearInterval(pizzaID);
+  } else {
+    pos++;
+
+    rollingPizza.style.left = `${pos}px`;
+  }
+};
+
+let pizzaID = setInterval(frame, 10);
+
 const hide = () => {
   bannerOpacity = Number(
     window.getComputedStyle(banner).getPropertyValue("opacity")
@@ -27,7 +42,6 @@ const hide = () => {
   } else if (bannerOpacity == 0) {
     {
       banner.style.display = "none";
-      console.log("fired");
     }
     clearInterval(intervalID);
   }
