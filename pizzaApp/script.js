@@ -4,16 +4,46 @@ let bannerOpacity = 0;
 let intervalID = 0;
 
 const dropZone = document.getElementById("dropZone");
+
 console.log(dropZone);
 
 let sideDiv = document.getElementsByClassName("pizzaIngredients")[0];
 
-dropZone.addEventListener("dragover", (e) => {
+const dragStart = () => {
+  console.log("start");
+};
+
+const dragEnd = () => {
+  console.log("end");
+};
+
+const dragOver = (e) => {
+  e.preventDefault(); //necessary for the drop, otherwise drop doesn't run
+  console.log("over");
+};
+
+const dragEnter = (e) => {
   e.preventDefault();
-  const ingredient = document.querySelector(".dragging");
-  dropZone.appendChild(ingredient);
-  console.log("drag over");
-});
+  console.log("enter");
+};
+
+const dragLeave = () => {
+  console.log("leave");
+};
+
+const dragDrop = (e) => {
+  dropZone.append(curEl);
+  console.log("dropped");
+};
+
+//drop zone event listeners
+dropZone.addEventListener("dragover", dragOver);
+dropZone.addEventListener("dragenter", dragEnter);
+dropZone.addEventListener("dragleave", dragLeave);
+dropZone.addEventListener("drop", dragDrop);
+
+//creating pictures
+
 const createPictures = () => {
   for (let i = 1; i < 10; i++) {
     let newImage = document.createElement("img");
@@ -22,12 +52,12 @@ const createPictures = () => {
     newImage.setAttribute("draggable", "true");
     newImage.addEventListener("dragstart", () => {
       newImage.classList.add("dragging");
-      console.log(document.getElementsByClassName("dragging"));
-      console.log("drag started");
+      curEl = newImage;
+      dragStart();
     });
     newImage.addEventListener("dragend", () => {
       newImage.classList.remove("dragging");
-      console.log("drag ended");
+      dragEnd();
     });
     sideDiv.appendChild(newImage);
   }
@@ -38,6 +68,8 @@ createPictures();
 //have to write two new functions, one for dragend, one for dragstart
 
 //eitan ^^
+
+//drag functions
 
 const rollingPizza = document.getElementById("rollingPizza");
 let pos = 0;
