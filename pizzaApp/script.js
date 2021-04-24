@@ -36,6 +36,8 @@ const dragDrop = (e) => {
   console.log("dropped");
 };
 
+//ssss
+
 //drop zone event listeners
 dropZone.addEventListener("dragover", dragOver);
 dropZone.addEventListener("dragenter", dragEnter);
