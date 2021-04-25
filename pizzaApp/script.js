@@ -1,6 +1,6 @@
-const banner = document.getElementById("banner");
-let bannerOpacity = 0;
-let intervalID = 0;
+let start = alert(`Be aware this game can be addicting  (especially for ages under 5 and over 70)`);
+
+
 
 const dropZone = document.getElementById("dropZone");
 
@@ -77,7 +77,9 @@ const frame = () => {
     } else {
         pos++;
 
-        rollingPizza.style.left = `${pos}px`;
+        rollingPizza.style.left = `
+        $ { pos }
+        px `;
     }
 };
 
