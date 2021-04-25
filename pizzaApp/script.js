@@ -36,8 +36,6 @@ const dragDrop = (e) => {
   console.log("dropped");
 };
 
-//ssss
-
 //drop zone event listeners
 dropZone.addEventListener("dragover", dragOver);
 dropZone.addEventListener("dragenter", dragEnter);
@@ -63,13 +61,11 @@ const createPictures = () => {
     });
     sideDiv.appendChild(newImage);
   }
-};
+}; //bit of an overcomplicated function, could split this up into two
 
 createPictures();
 
 //have to write two new functions, one for dragend, one for dragstart
-
-//eitan ^^
 
 //drag functions
 
@@ -88,6 +84,8 @@ const frame = () => {
 
 let pizzaID = setInterval(frame, 10);
 
+//banner stuff
+
 const hide = () => {
   bannerOpacity = Number(
     window.getComputedStyle(banner).getPropertyValue("opacity")
@@ -103,11 +101,6 @@ const hide = () => {
   }
 };
 
-const show = () => {
-  if (bannerOpacity == 0) {
-    banner.style.display = "none";
-  }
-};
 const fadeOut = () => {
   intervalID = setInterval(hide, 500);
 };
