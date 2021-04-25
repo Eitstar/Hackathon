@@ -1,158 +1,163 @@
 * {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  cursor: url(https://cur.cursors-4u.net/food/foo-2/foo165.cur), auto !important;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    cursor: url(https://cur.cursors-4u.net/food/foo-2/foo165.cur), auto !important;
+    color: black;
+    text-align: center;
 }
 
 header {
-  width: 100%;
-  height: 10rem;
-  background-color: salmon;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    height: 10rem;
+    /* background-color: salmon; */
+    background-color: #f2884b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
-  width: 5rem;
-  height: 5rem;
-  position: absolute;
-  transition: all 2s ease-in-out;
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    transition: all 2s ease-in-out;
 }
 
 .logo:hover {
-  transform: rotate(360deg);
+    transform: rotate(360deg);
 }
 
 .pizzaLogoContainer {
-  height: 5rem;
-  width: 100%;
-  background-color: salmon;
-  position: relative;
+    height: 3rem;
+    /* width: 100%; */
+    /* background-color: salmon; */
+    position: relative;
 }
 
 .banner {
-  width: 100%;
-  height: 5rem;
-  background-color: #f2884b;
-  justify-content: center;
-  align-items: center;
-  display: none;
+    width: 100%;
+    height: 5rem;
+    background-color: #f2884b;
+    justify-content: center;
+    align-items: center;
+    display: none;
 }
 
 .whiteText {
-  color: white;
+    /* color: white; */
 }
+
 .greenText {
-  color: darkblue;
+    /* color: darkblue; */
 }
 
 .toppingInstructions {
-  grid-column: 1 / span 3;
-  justify-self: center;
-  align-self: center;
+    grid-column: 1 / span 3;
+    justify-self: center;
+    align-self: center;
 }
 
 .parentContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: #f2884b;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #f2884b;
 }
+
 .pizzaDropZone {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: fit-content;
-  background-color: #f2884b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: fit-content;
+    background-color: #f2884b;
 }
 
 .pizzaImg {
-  width: 40%;
-  height: 40%;
-  margin-top: 5rem;
+    width: 40%;
+    height: 40%;
+    margin-top: 5rem;
 }
 
 .pizzaIngredients {
-  margin-left: 1rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 5rem;
-  column-gap: 1rem;
-  align-items: center;
-  width: 40%;
-  background-color: #f2884b;
+    margin-left: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 5rem;
+    column-gap: 1rem;
+    align-items: center;
+    width: 40%;
+    background-color: #f2884b;
 }
 
 .draggable {
-  padding: 1rem;
-  background-color: white;
-  border: 2px solid black;
-  cursor: move;
+    padding: 1rem;
+    background-color: white;
+    border: 2px solid black;
+    cursor: move;
 }
 
 .draggable.dragging {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 
 .toppings {
-  width: 3rem;
-  height: 3rem;
+    width: 5rem;
+    height: 5rem;
 }
 
 footer {
-  padding-top: 1rem;
-  width: 100%;
-  height: 5rem;
-  background-color: black;
-  display: flex;
-  justify-content: center;
+    padding-top: 1rem;
+    width: 100%;
+    height: 5rem;
+    background-color: #f2884b;
+    display: flex;
+    justify-content: center;
 }
 
 nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 ul {
-  display: flex;
-  justify-content: space-evenly;
-  list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
 }
 
 i {
-  margin: 1rem;
+    margin: 1rem;
 }
 
 i,
 a {
-  transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
+
 i:hover {
-  transform: scale(1.5);
+    transform: scale(1.5);
 }
 
 a {
-  margin: 1rem;
-  color: #2a558c;
-  text-decoration: none;
-  font-size: large;
+    margin: 1rem;
+    color: #2a558c;
+    text-decoration: none;
+    font-size: large;
 }
 
 a:link,
 a:visited {
-  color: none;
+    color: none;
 }
 
 a:hover {
-  color: lightblue;
+    color: lightblue;
 }
 
-a > li:hover {
-  transform: scale(1.5);
+a>li:hover {
+    transform: scale(1.5);
 }
